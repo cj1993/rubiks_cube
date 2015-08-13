@@ -1,15 +1,15 @@
 require_relative '../prettyprint'
 
-class TA
+class TB
   def face_pattern
     [%w(. . x), %w(x x x), %w(. . x)]
   end
 
   def ribbon_pattern
-    [%w(. x .), %w(. . .), %w(. x .), %w(x . x)]
+    [%w(x x .), %w(. . .), %w(. x x), %w(. . .)]
   end
 
   def algorithm
-    "F R U R' U' F'"
+    "R U R' U' R' F R F'"
   end
 end
