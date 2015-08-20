@@ -10,9 +10,6 @@ class PrettyPrint
   end
 
   def pretty_print_ribbon(blueprint)
-    blueprint[2].reverse.each { |x| print " #{x}" }
-    print "\n"
-    [blueprint[3], blueprint[1]].transpose.each {|x| puts "#{x[0]}     #{x[1]}"}
-    blueprint[0].each { |x| print " #{x}" }
+    puts " #{blueprint[2][2]} #{blueprint[2][1]} #{blueprint[2][0]}\n#{blueprint[3][0]}     #{blueprint[1][2]}\n#{blueprint[3][1]}     #{blueprint[1][1]}\n#{blueprint[3][2]}     #{blueprint[1][0]}\n #{blueprint[0][0]} #{blueprint[0][1]} #{blueprint[0][2]}"
   end
 end
