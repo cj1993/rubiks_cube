@@ -1,10 +1,10 @@
 class Orienter
-  def face_orientations(alg)
+  def faces(pattern)
     [
-      alg,
-      alg.transpose.reverse,
-      alg.flatten.reverse.each_slice(3).to_a,
-      alg.reverse.transpose
+      pattern,
+      pattern.transpose.reverse,
+      pattern.flatten.reverse.each_slice(3).to_a,
+      pattern.reverse.transpose
     ]
   end
 end

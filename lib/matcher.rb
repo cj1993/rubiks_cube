@@ -1,10 +1,11 @@
 class Matcher
-  def oll_matcher(algorithm, face_pattern_orientations, converted_face)
-    if face_pattern_orientations[0] == converted_face
+  def oll(algorithm, face_pattern_orientations, converted_face)
+    case converted_face
+    when face_pattern_orientations[0]
       algorithm
-    elsif face_pattern_orientations[1] == converted_face
+    when face_pattern_orientations[1]
       "U " + algorithm
-    elsif face_pattern_orientations[2] == converted_face
+    when face_pattern_orientations[2]
       "U2 " + algorithm
     else
       "U' " + algorithm

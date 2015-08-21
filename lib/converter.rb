@@ -1,20 +1,20 @@
 class Converter
-  def top_face_converter(top_face)
-    sub = top_face[1][1]
+  def face(face)
+    sub = face[1][1]
 
-    top_face.map do |i|
-      i.map do |j|
-        j == sub ? 'x' : '.'
+    face.map do |row|
+      row.map do |element|
+        element == sub ? 'x' : '.'
       end
     end
   end
 
-  def top_ribbon_converter(top_ribbon, top_face)
-    sub = top_face[1][1]
+  def ribbon(ribbon, face)
+    sub = face[1][1]
 
-    top_ribbon.map do |i|
-      i.map do |j|
-        j == sub ? 'x' : '.'
+    ribbon.map do |row|
+      row.map do |element|
+        element == sub ? 'x' : '.'
       end
     end
   end

@@ -1,8 +1,8 @@
 class TopFace
-  def top_face
-    top_face = Array.new(3, Array.new(3))
+  def face
+    face = Array.new(3, Array.new(3))
 
-    top_face.map! do |row|
+    face.map! do |row|
       row.map do
         gets.chomp
       end
