@@ -1,5 +1,3 @@
-require_relative '../prettyprint'
-
 class TA
   def face
     [%w(. . x), %w(x x x), %w(. . x)]

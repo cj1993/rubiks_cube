@@ -37,7 +37,8 @@ class App
     end
 
     # while ribbon_flag
-    #   puts "\nEnter the ribbon of your cube, from the front face rotating clockwise, 1/4 turn each time\n"
+    #   TODO
+    #   puts "\n\n"
     #
     #   top_ribbon = topribbon.ribbon
     #
@@ -49,10 +50,12 @@ class App
     #   ribbon_flag = ribbon_flag == 'y' ? false : true
     # end
 
-    converted_face = converter.face(top_face)
+    # converted_face = converter.face(top_face)
     # converted_ribbon = converter.ribbon(top_ribbon, top_face)
 
-    puts matcher.oll(ta.algorithm, orienter.faces(ta.face), converted_face)
+    # puts matcher.oll(ta.algorithm, orienter.faces(ta.face), converted_face)
+
+
   end
 end
 

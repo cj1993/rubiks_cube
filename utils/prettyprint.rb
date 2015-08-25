@@ -1,5 +1,3 @@
-require_relative '../lib/topface'
-
 class PrettyPrint
   def face(user_input)
     puts ' _ _ _'
