@@ -1,20 +1,16 @@
 class Converter
   def face(face)
-    sub = face[1][1]
-
     face.map do |row|
       row.map do |element|
-        element == sub ? 'x' : '.'
+        element == face[1][1] ? 'x' : '.'
       end
     end
   end
 
-  def ribbon(ribbon, face)
-    sub = face[1][1]
-
-    ribbon.map do |row|
-      row.map do |element|
-        element == sub ? 'x' : '.'
+  def ribbon(centres, ribbon)
+    ribbon.each_with_index do |row, index|
+      row.map! do |element|
+        element == centres[index] ? 'x' : element
       end
     end
   end

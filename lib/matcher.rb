@@ -1,5 +1,5 @@
 class Matcher
-  def oll(algorithm, face_pattern_orientations, converted_face)
+  def match(algorithm, face_pattern_orientations, converted_face)
     case converted_face
     when face_pattern_orientations[0]
       algorithm

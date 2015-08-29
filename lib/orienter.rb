@@ -1,5 +1,5 @@
 class Orienter
-  def faces(pattern)
+  def orient(pattern)
     [
       pattern,
       pattern.transpose.reverse,
