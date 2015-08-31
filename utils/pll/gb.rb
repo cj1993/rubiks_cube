@@ -1,6 +1,6 @@
 class GB
   def ribbon
-    [%w(. . x), %w(x x x), %w(x x x), %w(x x x)]
+    [%w(x . .), %w(. x x), %w(x x x), %w(x x x)]
   end
 
   def algorithm
