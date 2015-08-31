@@ -10,7 +10,7 @@ class Converter
   def ribbon(centres, ribbon)
     ribbon.each_with_index do |row, index|
       row.map! do |element|
-        element == centres[index] ? 'x' : element
+        element == centres[index] ? '.' : 'x'
       end
     end
   end

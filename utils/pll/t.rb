@@ -1,6 +1,6 @@
 class T
-  def pattern
-    [%w(. . xi), %w(. yi .), %w(xj . .), %w(. yj .)]
+  def ribbon
+    [%w(. . x), %w(x x x), %w(x . .), %w(. x .)]
   end
 
   def algorithm

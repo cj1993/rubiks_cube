@@ -1,14 +1,16 @@
 class Matcher
-  def match(algorithm, face_pattern_orientations, converted_face)
-    case converted_face
-    when face_pattern_orientations[0]
+  def match(algorithm, pattern_orientations, converted)
+    case converted
+    when pattern_orientations[0]
       algorithm
-    when face_pattern_orientations[1]
+    when pattern_orientations[1]
       "U " + algorithm
-    when face_pattern_orientations[2]
+    when pattern_orientations[2]
       "U2 " + algorithm
-    else
+    when pattern_orientations[3]
       "U' " + algorithm
+    else
+      'Invalid case'
     end
   end
 end
