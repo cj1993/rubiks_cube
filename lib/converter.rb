@@ -1,5 +1,5 @@
 class Converter
-  def convert(face, ribbon=nil)
+  def convert(face, ribbon = nil)
     @sub = face[1][1]
     ribbon ? mappings(ribbon) : mappings(face)
   end

@@ -10,7 +10,6 @@ class OLL
       [%w(x x .), %w(. . .), %w(. x x), %w(. . .)] => "R U R' U' R' F R F'"
     }
 
-    # require 'pry'; binding.pry
     combinations[ribbon] == face ? algorithms[ribbon] : 'Invalid case'
   end
 end

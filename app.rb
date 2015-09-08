@@ -4,8 +4,6 @@ require_relative 'lib/centres'
 require_relative 'lib/converter'
 require_relative 'lib/orienter'
 require_relative 'lib/matcher'
-require_relative 'utils/oll/ta'
-require_relative 'utils/oll/tb'
 require_relative 'utils/oll/oll'
 require_relative 'utils/pll/t'
 require_relative 'utils/prettyprint'
@@ -15,8 +13,6 @@ class App
     topface = TopFace.new
     topribbon = TopRibbon.new
     centres = Centres.new
-    # ta = TA.new
-    # tb = TB.new
     oll = OLL.new
     # t = T.new
     prettyprint = PrettyPrint.new
