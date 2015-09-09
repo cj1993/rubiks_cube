@@ -1,3 +1,5 @@
+# Returns an array of all default orientations for the ribbon or face
+
 class Orienter
   def orient(pattern)
     [

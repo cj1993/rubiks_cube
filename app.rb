@@ -1,3 +1,5 @@
+# Main program loop
+
 require_relative 'lib/topface'
 require_relative 'lib/topribbon'
 require_relative 'lib/centres'

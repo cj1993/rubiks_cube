@@ -1,3 +1,5 @@
+# Returns algorithms correctly for any given face orientation
+
 class Matcher
   def match(algorithm, pattern_orientations, converted)
     case converted

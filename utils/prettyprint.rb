@@ -1,3 +1,6 @@
+# Returns a more visual representation of the users input for the
+# centres, ribbon and face
+
 class PrettyPrint
   def face(user_input)
     puts ' _ _ _'
