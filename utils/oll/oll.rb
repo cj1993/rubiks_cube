@@ -1,21 +1,24 @@
-# TODO Class documentation
+# Gets the correct OLL algorithm for a given (unique) ribbon
+
+require_relative '../../lib/orienter'
 
 class OLL
+  def get_index(ribbon)
+    orienter = Orienter.new
 
-  # TODO - method name not indicative of what method does
-  def tmp(face, ribbon)
-    combinations[ribbon] == face ? algorithms[ribbon] : 'Invalid case'
+    orienter.ribbon(ribbon).each_with_index do |orientation, index|
+      algorithms.keys.each do |key|
+        @index, @key = index, key if orientation == key
+      end
+    end
+    @index
+  end
+
+  def get_algorithm
+    algorithms[@key]
   end
 
   private
-
-  # combinations hash: ribbon => face
-  def combinations
-    {
-      [%w(. x .), %w(. . .), %w(. x .), %w(x . x)] => [%w(. . x), %w(x x x), %w(. . x)],
-      [%w(x x .), %w(. . .), %w(. x x), %w(. . .)] => [%w(. . x), %w(x x x), %w(. . x)]
-    }
-  end
 
   # algorithms hash: ribbon => algorithm
   def algorithms
