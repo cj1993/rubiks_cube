@@ -73,7 +73,7 @@ class App
     # puts matcher.match(ta.algorithm, orienter.orient(ta.face), converted_face)
     # puts matcher.match(t.algorithm, orienter.orient(t.ribbon), converted_ribbon)
 
-    puts oll.combinations(converted_face, converted_ribbon)
+    puts oll.tmp(converted_face, converted_ribbon)
   end
 end
 
