@@ -1,9 +1,6 @@
-# Returns a boolean on whether or not a pair of colours are opposite,
-# this is only correct for default European colour schemes
-
 class Opposites
-  def is_opposite?(*colours)
-    matches = [%w(orange red), %w(blue green), %w(white yellow)]
+  def opposite?(*colours)
+    matches = [%w(o r), %w(b g), %w(w y)]
 
     !!matches.include?(colours.sort)
   end

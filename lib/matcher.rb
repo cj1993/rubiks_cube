@@ -1,5 +1,3 @@
-# Returns algorithms correctly for any given face orientation
-
 class Matcher
   def match(index, algorithm)
     case index
@@ -11,8 +9,6 @@ class Matcher
       "U2 " + algorithm
     when 3
       "U' " + algorithm
-    else
-      'Invalid case'
     end
   end
 end

@@ -1,7 +1,3 @@
-# Maps colours depending on the centre face colour
-# works for face and ribbon, but the ribbon is optional as
-# the face does not require it for correct mapping
-
 class Converter
   def convert(face, ribbon = nil)
     @sub = face[1][1]
