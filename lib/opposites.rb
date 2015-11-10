@@ -1,6 +1,6 @@
 class Opposites
   def opposite?(*colours)
-    matches = [%w(o r), %w(b g), %w(w y)]
+    matches = [%w(w y), %w(b g), %w(o r)]
 
     !!matches.include?(colours.sort)
   end

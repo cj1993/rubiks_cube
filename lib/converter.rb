@@ -1,15 +1,18 @@
 class Converter
-  def convert(face, ribbon = nil)
-    @sub = face[1][1]
-    ribbon ? mappings!(ribbon) : mappings!(face)
+  def convert(ribbon, arg)
+    mappings!(ribbon, arg)
   end
 
   private
 
-  def mappings!(arg)
-    arg.map do |row|
+  def mappings!(ribbon, arg)
+    ribbon.map.with_index do |row, index|
       row.map do |element|
-        element == @sub ? 'x' : '.'
+        if arg.length == 3
+          element == arg[1][1] ? 'x' : '.'
+        else
+          element == arg[index] ? '.' : 'x'
+        end
       end
     end
   end
