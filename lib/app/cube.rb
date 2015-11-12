@@ -44,7 +44,7 @@ class Cube
       puts "Face\n\n"
       top_face = topface.face
       prettyprint.face(top_face)
-      puts "Is this pattern correct (y/n)?\n"
+      puts "\nIs this pattern correct (y/n)?\n"
       @face_flag = gets.chomp.downcase
       @face_flag = !(@face_flag == 'y')
     end

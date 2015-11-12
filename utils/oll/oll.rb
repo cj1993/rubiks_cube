@@ -4,7 +4,7 @@ class OLL
   def index(ribbon)
     orienter = Orienter.new
 
-    orienter.ribbon(ribbon).each_with_index do |orientation, index|
+    orienter.orient(ribbon).each_with_index do |orientation, index|
       algorithms.keys.each do |key|
         @index, @key = index, key if orientation == key
       end
