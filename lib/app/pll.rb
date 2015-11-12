@@ -9,8 +9,8 @@ class PLL
 
     converted_ribbon = cube.convert(ribbon, centres)
 
-    pll_index     = cube.pll_index(converted_ribbon)
-    pll_algorithm = cube.pll_algorithm
+    pll_index     = cube.pll_index
+    pll_algorithm = cube.pll_algorithm(converted_ribbon)
 
     puts cube.solve(pll_index, pll_algorithm)
   end

@@ -1,19 +1,18 @@
-require_relative '../../lib/orienter'
+require_relative '../../lib/converter'
 
 class PLL
-  def index(ribbon)
-    orienter = Orienter.new
+  attr_reader :converter
 
-    orienter.orient(ribbon).each_with_index do |orientation, index|
-      unique_ribbon_algorithms.keys.each do |key|
-        @index, @key = index, key if orientation == key
-      end
-    end
-    @index
+  def initialize
+    @converter = Converter.new
   end
 
-  def algorithm
-    unique_ribbon_algorithms[@key] || 'Invalid case'
+  def index
+    converter.get_index
+  end
+
+  def algorithm(ribbon)
+    unique_ribbon_algorithms[ribbon] || 'Invalid case'
   end
 
   private
@@ -28,7 +27,7 @@ class PLL
       # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # NB
       # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # RA
       # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # RB
-      [%w(. . x), %w(. x .), %w(x . .), %w(. x .)] => "R U R' U' R' F R2 U' R' U' R U R' F'"  # T
+      [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "R U R' U' R' F R2 U' R' U' R U R' F'"  # T
       # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # V
       # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => ""   # Y
     }

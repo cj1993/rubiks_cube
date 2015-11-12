@@ -11,10 +11,17 @@ class Converter
     mappings!(ribbon, arg)
   end
 
+  def get_index
+    @@index
+  end
+
   private
 
   def mappings!(ribbon, arg)
-    ribbon = pll_match(ribbon, arg) unless arg.length == 3
+    if arg.length == 4
+      @@index  = pll_match(ribbon, arg).values.first
+      ribbon   = pll_match(ribbon, arg).keys.first
+    end
 
     ribbon.map.with_index do |row, index|
       row.map do |element|
@@ -38,6 +45,8 @@ class Converter
         end
       end
     end
-    orientations[matches.key(matches.values.max)]
+
+    match = matches.max_by { |_, v| v }
+    { orientations[match[0]] => match[0] }
   end
 end

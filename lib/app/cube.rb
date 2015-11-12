@@ -75,12 +75,12 @@ class Cube
     oll.algorithm
   end
 
-  def pll_index(converted_ribbon)
-    pll.index(converted_ribbon)
+  def pll_index
+    pll.index
   end
 
-  def pll_algorithm
-    pll.algorithm
+  def pll_algorithm(converted_ribbon)
+    pll.algorithm(converted_ribbon)
   end
 
   def solve(index, algorithm)
