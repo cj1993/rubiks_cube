@@ -1,6 +1,6 @@
 class Orienter
   def orient(arg)
-    arg.length == 9 ? face(arg) : non_face(arg)
+    arg.length == 3 ? face(arg) : non_face(arg)
   end
 
   private
