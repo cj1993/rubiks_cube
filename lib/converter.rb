@@ -12,15 +12,15 @@ class Converter
   end
 
   def get_index
-    @@index
+    @index
   end
 
   private
 
   def mappings!(ribbon, arg)
     if arg.length == 4
-      @@index  = pll_match(ribbon, arg).values.first
-      ribbon   = pll_match(ribbon, arg).keys.first
+      @index  = pll_match(ribbon, arg).values.first
+      ribbon  = pll_match(ribbon, arg).keys.first
     end
 
     ribbon.map.with_index do |row, index|

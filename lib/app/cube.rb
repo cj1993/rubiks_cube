@@ -15,8 +15,6 @@ class Cube
     puts "Rubiks cube last layer solver!\n\n"
     puts "Use : white = w, yellow = y, blue = b, green = g, orange = o, red = r\n\n"
 
-    @centres_flag = @face_flag = @ribbon_flag = true
-
     @centres     = Centres.new
     @converter   = Converter.new
     @matcher     = Matcher.new
@@ -24,41 +22,35 @@ class Cube
     @topribbon   = TopRibbon.new
     @prettyprint = PrettyPrint.new
     @oll         = OLL.new
-    @pll         = PLL.new
+    @pll         = PLL.new(converter)
   end
 
   def get_centres
-    while @centres_flag
+    while true
       puts "Centres\n\n"
       x_y_centres = centres.x_y_centres
       prettyprint.centres(x_y_centres)
-      puts "\nIs this pattern correct (y/n)?\n"
-      @centres_flag = gets.chomp.downcase
-      @centres_flag = !(@centres_flag == 'y')
+      break if flag?
     end
     x_y_centres
   end
 
   def get_face
-    while @face_flag
+    while true
       puts "Face\n\n"
       top_face = topface.face
       prettyprint.face(top_face)
-      puts "\nIs this pattern correct (y/n)?\n"
-      @face_flag = gets.chomp.downcase
-      @face_flag = !(@face_flag == 'y')
+      break if flag?
     end
     top_face
   end
 
   def get_ribbon
-    while @ribbon_flag
+    while true
       puts "Ribbon\n\n"
       top_ribbon = topribbon.ribbon
       prettyprint.ribbon(top_ribbon)
-      puts "\nIs this pattern correct (y/n)?\n"
-      @ribbon_flag = gets.chomp.downcase
-      @ribbon_flag = !(@ribbon_flag == 'y')
+      break if flag?
     end
     top_ribbon
   end
@@ -85,5 +77,12 @@ class Cube
 
   def solve(index, algorithm)
     matcher.match(index, algorithm)
+  end
+
+  private
+
+  def flag?
+    puts "\nIs this pattern correct (y/n)?\n"
+    gets.chomp.downcase == 'y'
   end
 end

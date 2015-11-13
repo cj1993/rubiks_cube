@@ -1,5 +1,6 @@
 class Matcher
   def match(index, algorithm)
+    abort 'Invalid case.' unless algorithm
     case index
     when 0
       algorithm

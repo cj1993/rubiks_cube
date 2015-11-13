@@ -1,9 +1,7 @@
-require_relative 'lib/app/oll'
-require_relative 'lib/app/pll'
+require_relative 'lib/app/solve'
 
 class App
-  OLL.new.solve
-  PLL.new.solve
+  Solve.new.solve
 end
 
 App.new

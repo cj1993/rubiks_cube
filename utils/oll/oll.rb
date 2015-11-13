@@ -1,9 +1,13 @@
 require_relative '../../lib/orienter'
 
 class OLL
-  def index(ribbon)
-    orienter = Orienter.new
+  attr_reader :orienter
 
+  def initialize
+    @orienter = Orienter.new
+  end
+
+  def index(ribbon)
     orienter.orient(ribbon).each_with_index do |orientation, index|
       algorithms.keys.each do |key|
         @index, @key = index, key if orientation == key
@@ -13,7 +17,7 @@ class OLL
   end
 
   def algorithm
-    combinations[@key] ? algorithms[@key] : 'Invalid case'
+    algorithms[@key]
   end
 
   private
