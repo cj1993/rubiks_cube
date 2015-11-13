@@ -5,7 +5,6 @@ describe Centres do
   x_y_centres = Centres.new.x_y_centres
 
   context "Centres" do
-
     it "returns an Array of size 4" do
       expect(x_y_centres.length).to eq 4
     end
