@@ -26,32 +26,32 @@ class PLL
 
   def unique_ribbon_algorithms
     {
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # E
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # F
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # JA
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # JB
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # NA
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # NB
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # RA
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # RB
-      [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "R U R' U' R' F R2 U' R' U' R U R' F'",      # T
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # V
-      [%w(. . x), %w(x . .), %w(. x x), %w(x x .)] => "F R U' R' U' R U R' F' R U R' U' R' F R F'" # Y
+      [%w(x . x), %w(x . x), %w(x . x), %w(x . x)] => "x' R U' R' D R U R' D' R U R' D R U' R' D'",            # E
+      [%w(. x x), %w(x . x), %w(x x .), %w(. . .)] => "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R",        # F
+      [%w(. . .), %w(. . x), %w(x x x), %w(x x .)] => "R' U L' U2 R U' R' U2 L R U'",                          # JA
+      [%w(. x x), %w(x x x), %w(x . .), %w(. . .)] => "R U R' F' R U R' U' R' F R2 U' R' U'",                  # JB
+      [%w(x . .), %w(. x x), %w(x . .), %w(. x x)] => "R U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'", # NA
+      [%w(. . x), %w(x x .), %w(. . x), %w(x x .)] => "R' U R U' R' F' U' F R U R' F R' F' R U' R",            # NB
+      [%w(. . x), %w(x . x), %w(x x .), %w(. x .)] => "R U' R' U' R U R D R' U' R D' R' U2 R' U'",             # RA
+      [%w(. x .), %w(. x x), %w(x . x), %w(x . .)] => "R' U2 R U2 R' F R U R' U' R' F' R2 U'",                 # RB
+      [%w(. . x), %w(x x .), %w(. x x), %w(x . .)] => "R U R' U' R' F R2 U' R' U' R U R' F'",                  # T
+      [%w(. . x), %w(x x .), %w(. x x), %w(x . .)] => "R' U R' d' R' F' R2 U' R' U R' F R F",                  # V
+      [%w(. . x), %w(x . .), %w(. x x), %w(x x .)] => "F R U' R' U' R U R' F' R U R' U' R' F R F'"             # Y
     }
   end
 
   def non_unique_ribbon_algorithms
     {
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # AA
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # AB
-      [%w(x . .), %w(. x x), %w(x x x), %w(x x x)] => "R2' u R' U R' U' R u' R2 F' U F", # GA
-      [%w(x . .), %w(. x x), %w(x x x), %w(x x x)] => "F' U' F R2 u R' U R U' R u' R2"   # GB
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # GC
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # GD
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # UA
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # UB
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "",  # H
-      # [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => ""   # Z
+      [%w(. . x), %w(x . x), %w(x . x), %w(x . .)] => "x R' U R' D2 R U' R' D2 R2",     # AA
+      [%w(. . x), %w(x . x), %w(x . x), %w(x . .)] => "x R2 D2 R U R' D2 R U' R",       # AB
+      [%w(x . .), %w(. x x), %w(x x x), %w(x x x)] => "R2 u R' U R' U' R u' R2 F' U F", # GA
+      [%w(x . .), %w(. x x), %w(x x x), %w(x x x)] => "F' U' F R2 u R' U R U' R u' R2", # GB
+      [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "R2 u' R U' R U R' u R2 f R' f'", # GC
+      [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "f R f' R2 u' R U' R' U R' u R2", # GD
+      [%w(. x .), %w(. x .), %w(. . .), %w(. x .)] => "R U' R U R U R U' R' U' R2",     # UA
+      [%w(. x .), %w(. x .), %w(. . .), %w(. x .)] => "R2 U R U R' U' R' U' R' U R'",   # UB
+      [%w(. x .), %w(. x .), %w(. x .), %w(. x .)] => "M2 U M2 U2 M2 U M2",             # H
+      [%w(. x .), %w(. x .), %w(. x .), %w(. x .)] => "M2 U M2 U M' U2 M2 U2 M' U2"     # Z
     }
   end
 end
