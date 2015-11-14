@@ -34,7 +34,7 @@ class PLL
       [%w(. . x), %w(x x .), %w(. . x), %w(x x .)] => "R' U R U' R' F' U' F R U R' F R' F' R U' R",            # NB
       [%w(. . x), %w(x . x), %w(x x .), %w(. x .)] => "R U' R' U' R U R D R' U' R D' R' U2 R' U'",             # RA
       [%w(. x .), %w(. x x), %w(x . x), %w(x . .)] => "R' U2 R U2 R' F R U R' U' R' F' R2 U'",                 # RB
-      [%w(. . x), %w(x x .), %w(. x x), %w(x . .)] => "R U R' U' R' F R2 U' R' U' R U R' F'",                  # T
+      [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "R U R' U' R' F R2 U' R' U' R U R' F'",                  # T
       [%w(. . x), %w(x x .), %w(. x x), %w(x . .)] => "R' U R' d' R' F' R2 U' R' U R' F R F",                  # V
       [%w(. . x), %w(x . .), %w(. x x), %w(x x .)] => "F R U' R' U' R U R' F' R U R' U' R' F R F'"             # Y
     }
