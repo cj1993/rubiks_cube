@@ -49,20 +49,16 @@ class OLL
       [%w(x . .), %w(x x x), %w(. . x), %w(. x .)] => "R' U' y L' U L' y' L F L' F R",
       [%w(x x .), %w(x . x), %w(. x x), %w(. . .)] => "F U R U' R' U R U' R' F'",
       [%w(. x .), %w(x . x), %w(. x .), %w(x . x)] => "L' B' L U' R' U R U' R' U R L' B L",
+      # Square Cases
+      [%w(. x .), %w(x . .), %w(. . x), %w(. x .)] => "R' U2 l R U' R' U l' U2 R",
+      [%w(x x .), %w(. x x), %w(. . .), %w(. . .)] => "F R' F' R U R U' R'",
+      [%w(. . .), %w(. . x), %w(. x x), %w(. x x)] => "r' U2 (R U R' U) r",
+      [%w(x x .), %w(x . .), %w(. . .), %w(x x .)] => "r U2 R' U' R U' r'",
       # Big L Cases
       [%w(x x .), %w(. . .), %w(x x .), %w(x . .)] => "R' F R U R' F' R y L U' L'",
       [%w(. x x), %w(. . x), %w(. x x), %w(. . .)] => "L F' L' U' L F L' y' R' U R",
       [%w(. x .), %w(x . .), %w(x x .), %w(x . .)] => "R B R' L U L' U' R B' R'",
       [%w(. x .), %w(. . x), %w(. x x), %w(. . x)] => "L' B' L R' U' R U L' B L",
-      # T Cases
-      [%w(. x .), %w(. . .), %w(. x .), %w(x . x)] => "F R U R' U' F'",
-      [%w(x x .), %w(. . .), %w(. x x), %w(. . .)] => "R U R' U' R' F R F'",
-      # Z Cases
-      [%w(. x .), %w(. . .), %w(x x .), %w(. . x)] => "R' F R U R' U' y L' d R",
-      [%w(. x .), %w(x . .), %w(. x x), %w(. . .)] => "L F' L' U' L U y' R d' L'",
-      # M Cases
-      [%w(. . .), %w(x x x), %w(. . .), %w(. x .)] => "R U x' R U' R' U x U' R'",
-      [%w(. x .), %w(. . x), %w(. x .), %w(x . .)] => "R U R' U' x D' R' U R E'",
       # Small L Cases
       [%w(. x x), %w(. x .), %w(x . .), %w(x . x)] => "F R U R' U' R U R' U' F'",
       [%w(x x .), %w(x . x), %w(. . x), %w(. x .)] => "F' L' U' L U L' U' L U F",
@@ -80,19 +76,23 @@ class OLL
       [%w(. . .), %w(x . .), %w(. x .), %w(x x .)] => "R2' U R' B R U' R2' U l U l'",
       [%w(. x .), %w(. x .), %w(x . x), %w(. . x)] => "U' R U2' R' U' R U' R2 y' R' U' R U B",
       [%w(. x .), %w(. . .), %w(x . x), %w(. x .)] => "U' R' U2 R U R' U R2 y R U R' U' F'",
-      # Square Cases
-      [%w(. x .), %w(x . .), %w(. . x), %w(. x .)] => "R' U2 l R U' R' U l' U2 R",
-      [%w(x x .), %w(. x x), %w(. . .), %w(. . .)] => "F R' F' R U R U' R'",
-      [%w(. . .), %w(. . x), %w(. x x), %w(. x x)] => "r' U2 (R U R' U) r",
-      [%w(x x .), %w(x . .), %w(. . .), %w(x x .)] => "r U2 R' U' R U' r'",
+      # M Cases
+      [%w(. . .), %w(x x x), %w(. . .), %w(. x .)] => "R U x' R U' R' U x U' R'",
+      [%w(. x .), %w(. . x), %w(. x .), %w(x . .)] => "R U R' U' x D' R' U R E'",
       # P Cases
       [%w(. x x), %w(. x .), %w(x . .), %w(. . .)] => "L d R' d' L' U L F L'",
       [%w(x x .), %w(. . .), %w(. . x), %w(. x .)] => "R' d' L d R U' R' F' R",
       [%w(. x .), %w(x x x), %w(. . .), %w(. . .)] => "F U R U' R' F'",
       [%w(. x .), %w(. . .), %w(. . .), %w(x x x)] => "F' U' L' U L F",
+      # T Cases
+      [%w(. x .), %w(. . .), %w(. x .), %w(x . x)] => "F R U R' U' F'",
+      [%w(x x .), %w(. . .), %w(. x x), %w(. . .)] => "R U R' U' R' F R F'",
       # W Cases
       [%w(. . x), %w(. . .), %w(. x .), %w(x x .)] => "L U L' U L U' L' U' y2' R' F R F'",
-      [%W(X . .), %W(. X X), %W(. X .), %W(. . .)] => "R' U' R U' R' U R U y F R' F' R"
+      [%W(X . .), %W(. X X), %W(. X .), %W(. . .)] => "R' U' R U' R' U R U y F R' F' R",
+      # Z Cases
+      [%w(. x .), %w(. . .), %w(x x .), %w(. . x)] => "R' F R U R' U' y L' d R",
+      [%w(. x .), %w(x . .), %w(. x x), %w(. . .)] => "L F' L' U' L U y' R d' L'"
     }
   end
 end

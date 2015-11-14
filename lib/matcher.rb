@@ -5,7 +5,7 @@ class Matcher
     when 0
       algorithm
     when 1
-      "U " + algorithm
+      "U "  + algorithm
     when 2
       "U2 " + algorithm
     when 3
