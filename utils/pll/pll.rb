@@ -46,8 +46,8 @@ class PLL
       [%w(. . x), %w(x . x), %w(x . x), %w(x . .)] => "x R2 D2 R U R' D2 R U' R",       # AB
       [%w(x . .), %w(. x x), %w(x x x), %w(x x x)] => "R2 u R' U R' U' R u' R2 F' U F", # GA
       [%w(x . .), %w(. x x), %w(x x x), %w(x x x)] => "F' U' F R2 u R' U R U' R u' R2", # GB
-      [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "R2 u' R U' R U R' u R2 f R' f'", # GC
-      [%w(. . x), %w(x x x), %w(x . .), %w(. x .)] => "f R f' R2 u' R U' R' U R' u R2", # GD
+      [%w(x x x), %w(x x .), %w(. . x), %w(x x x)] => "R2 u' R U' R U R' u R2 f R' f'", # GC
+      [%w(x x x), %w(x x .), %w(. . x), %w(x x x)] => "f R f' R2 u' R U' R' U R' u R2", # GD
       [%w(. x .), %w(. x .), %w(. . .), %w(. x .)] => "R U' R U R U R U' R' U' R2",     # UA
       [%w(. x .), %w(. x .), %w(. . .), %w(. x .)] => "R2 U R U R' U' R' U' R' U R'",   # UB
       [%w(. x .), %w(. x .), %w(. x .), %w(. x .)] => "M2 U M2 U2 M2 U M2",             # H
