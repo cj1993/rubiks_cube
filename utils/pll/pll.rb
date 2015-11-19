@@ -1,4 +1,3 @@
-require_relative '../../lib/converter'
 require_relative '../../lib/orienter'
 
 class PLL
