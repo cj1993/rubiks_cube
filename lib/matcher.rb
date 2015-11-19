@@ -21,17 +21,17 @@ class Matcher
       return "U2 " + alg.drop(1).join(' ') if alg.first == "U"
       return "U' " + alg.drop(1).join(' ') if alg.first == "U2"
       return alg.drop(1).join(' ')         if alg.first == "U'"
-      return "U "  + alg.join(' ')
+      "U "  + alg.join(' ')
     when 2
       return "U "  + alg.drop(1).join(' ') if alg.first == "U'"
       return "U' " + alg.drop(1).join(' ') if alg.first == "U"
       return alg.drop(1).join(' ')         if alg.first == "U2"
-      return "U2 " + alg.join(' ')
+      "U2 " + alg.join(' ')
     when 3
       return "U "  + alg.drop(1).join(' ') if alg.first == "U2"
       return "U2 " + alg.drop(1).join(' ') if alg.first == "U'"
       return alg.drop(1).join(' ')         if alg.first == "U"
-      return "U' " + alg.join(' ')
+      "U' " + alg.join(' ')
     end
   end
 end

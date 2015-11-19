@@ -27,7 +27,7 @@ class Cube
 
   def get_centres
     while true
-      puts "Centres\n\n"
+      puts "\n\nCentres\n\n"
       x_y_centres = centres.x_y_centres
       prettyprint.centres(x_y_centres)
       break if flag?
@@ -37,7 +37,7 @@ class Cube
 
   def get_face
     while true
-      puts "Face\n\n"
+      puts "\n\nFace\n\n"
       top_face = topface.face
       prettyprint.face(top_face)
       break if flag?
@@ -47,7 +47,7 @@ class Cube
 
   def get_ribbon
     while true
-      puts "Ribbon\n\n"
+      puts "\n\nRibbon\n\n"
       top_ribbon = topribbon.ribbon
       prettyprint.ribbon(top_ribbon)
       break if flag?

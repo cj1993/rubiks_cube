@@ -3,9 +3,7 @@ class TopRibbon
     ribbon = Array.new(4, Array.new(3))
 
     ribbon.map! do |row|
-      row.map do
-        gets.chomp
-      end
+      row.map! { gets.chomp }
     end
   end
 end
