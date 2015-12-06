@@ -91,7 +91,7 @@ class OLL
       [%w(. x .), %w(x x .), %w(. . x), %w(. . .)] => "R U R' U R U' R' U' R' F R F'",
       [%w(. x .), %w(. . .), %w(x . .), %w(. x x)] => "L' U' L U' L' U L U L F' L' F",
       # Z Cases
-      [%w(. x ,), %w(. . .), %w(x x .), %w(. . x)] => "R' F R U R' U' F' U R",
+      [%w(. x .), %w(. . .), %w(x x .), %w(. . x)] => "R' F R U R' U' F' U R",
       [%w(. x x), %w(. . .), %w(. x .), %w(x . .)] => "R B' R' U' R U B U' R' "
     }
   end
