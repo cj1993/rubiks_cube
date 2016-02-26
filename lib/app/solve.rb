@@ -22,7 +22,7 @@ class Solve
     oll_index     = cube.oll_index(converted_ribbon)
     oll_algorithm = cube.oll_algorithm
 
-    puts cube.solve(oll_index, oll_algorithm)
+    cube.solve(oll_index, oll_algorithm)
   end
 
   def pll
@@ -34,6 +34,6 @@ class Solve
     pll_index     = cube.pll_index
     pll_algorithm = cube.pll_algorithm(converted_ribbon)
 
-    puts cube.solve(pll_index, pll_algorithm)
+    cube.solve(pll_index, pll_algorithm)
   end
 end

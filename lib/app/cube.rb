@@ -1,12 +1,10 @@
+Dir["./utils/**/*.rb"].each { |file| require file }
+
 require_relative '../centres'
 require_relative '../converter'
 require_relative '../matcher'
 require_relative '../topface'
 require_relative '../topribbon'
-
-require_relative '../../utils/oll/oll'
-require_relative '../../utils/pll/pll'
-require_relative '../../utils/prettyprint'
 
 class Cube
   attr_reader :centres, :converter, :matcher, :topface, :topribbon, :prettyprint, :oll, :pll
