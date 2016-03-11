@@ -7,8 +7,12 @@ class Solve
     @cube = Cube.new
   end
 
-  def solve
-    oll & pll
+  def solve_oll
+    oll
+  end
+
+  def solve_pll
+    pll
   end
 
   private
